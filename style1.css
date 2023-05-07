@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: grey;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+.movie-container {
+  margin: 20px;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+  align-items: center;
+  padding-left: 100px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 5px;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.seat.selected {
+  background-color: lightgreen;
+}
+
+.seat.occupied {
+  background-color: red;
+}
+
+.seat:nth-of-type(5) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(3) {
+  margin-left: 18px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1);
+  background-color: lightgreen;
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(2);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 100px;
+  border-radius: 5px;
+  color: white;
+  align-items: center;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:10px;
+}
+
+.showcase li small {
+  margin-left: 5px;
+}
+
+.row {
+  display: flex;
+  padding-left: 75px;
+  align-items: center;
+  margin-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.screen {
+  background-color: #fff;
+  height: 100px;
+  width: 80%;
+  padding-left: 50px;
+  margin: 30px 30px;
+  margin-left: 120px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+ text-align: center;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: bold;
+}
+
+p.text span {
+  color: #6feaf6;
+}
